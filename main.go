@@ -25,11 +25,11 @@ func main() {
 	*/
 	// codedPubKey := getPublicRSAKeyFromFile()
 	// public, _ := decodePubKey(codedPubKey)
-	// aesKey := generateAesKey()
+	// desKey := generateDESKey()
 	// IV := generateIV()
-	// saveAESKeyToFile(aesKey)
-	// cypherAESKey := encryptRSA(public, aesKey)
-	// releaseEncryptedAESKey(cypherAESKey)
+	// saveDESKeyToFile(desKey)
+	// cypherDESKey := encryptRSA(public, desKey)
+	// releaseEncryptedDESKey(cypherDESKey)
 	// releaseIV(IV)
 
 	/*
@@ -40,9 +40,9 @@ func main() {
 	*/
 	// codedSecretKey := getPrivateRSAKeyFromFile()
 	// secret, _ := decodeSecretKey(codedSecretKey)
-	// cypher := getEncryptedAESKeyFromFile()
+	// cypher := getEncryptedDESKeyFromFile()
 	// key := decrptRSA(secret, cypher)
-	// saveAESKeyToFile(key)
+	// saveDESKeyToFile(key)
 	// keys := splitKeyintoKeys(strconv.FormatUint(key, 10))
 	// IV := getIVFromFile()
 	// formatedIV := formatIV(IV)
@@ -51,20 +51,17 @@ func main() {
 	// releaseCypher(cyphertext)
 
 	/*
-		Final execution.  Alice
+		Final execution run by Alice. Bob has release the encrypted message he wanted to deliver to Alice. She
+		will reach out and grab it from a public drive and then decode the message, where she can finally read it.
 	*/
-	// var cText cypherText
-	// var mText cypherText
-	// codedSecretKey := getPrivateRSAKeyFromFile()
-	// secret, _ := decodeSecretKey(codedSecretKey)
-	// cypher := getEncryptedAESKeyFromFile()
-	// key := decrptRSA(secret, cypher)
-	// saveAESKeyToFile(key)
+
+	// key := getDesKeyfromFile()
 	// keys := splitKeyintoKeys(strconv.FormatUint(key, 10))
 	// IV := getIVFromFile()
 	// formatedIV := formatIV(IV)
-	// message := "Hey Alice, I'm glad that we're able to communicate now in this super secret channel, just wanted you to know the eagle has landed"
-	// RunDesFourTimes(keys,formatIV, message)
+	// cyphertext := retrieveCypherTextFromFile()
+	// message:= RunDesFourTimes(keys,formatIV, cyphertest)
+	// println(message)
 
 }
 
